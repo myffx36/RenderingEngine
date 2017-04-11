@@ -1,0 +1,10 @@
+09/08/2014:
+2D rendering & text rendering
+python binding
+code modify add exeception handle
+music & sound
+video
+ui
+physic engine
+keyframe animation 
+animation blending

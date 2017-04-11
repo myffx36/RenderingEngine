@@ -1,0 +1,843 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="AnimationEngine">
+      <UniqueIdentifier>{85146336-dab0-4baf-8dcc-8466bfa5720a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Base">
+      <UniqueIdentifier>{26e84838-26ea-40c2-b660-156b274b0787}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DebugHelper">
+      <UniqueIdentifier>{cb2ca679-2740-4083-9c1f-4402f68c8576}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="FileUtility">
+      <UniqueIdentifier>{d74e584c-7333-42bf-adb5-dfadb85fcd2e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Base\CommonUtility">
+      <UniqueIdentifier>{4708f64b-66b8-4b25-8dc6-c38ed4d45aa6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Base\Configuration">
+      <UniqueIdentifier>{50ae5245-8a70-46fc-9210-eb7afaacfb81}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Base\Container">
+      <UniqueIdentifier>{6baf5a16-cb75-4bf1-91c2-bcf9e38c8b33}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Base\Exception">
+      <UniqueIdentifier>{b787e0b4-9eb3-430d-8d46-bf03326faa31}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Base\FileSystem">
+      <UniqueIdentifier>{386e55fe-012c-4db6-bed9-9ffb0397204b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Base\Math">
+      <UniqueIdentifier>{902ca6a9-3c48-4500-aa0e-8c6ea4766670}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Base\Memory">
+      <UniqueIdentifier>{ba28f86f-d59d-4400-8fe3-35b8ea021a62}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Base\Utility">
+      <UniqueIdentifier>{187849ee-382f-4d6e-ace4-f619eb5f7375}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Base\ThreadProcessor">
+      <UniqueIdentifier>{5065cf0d-66b4-45c9-89f2-8e9237e571d7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GamePlay">
+      <UniqueIdentifier>{915a2f54-b3fc-45c8-ab4b-6d24f1fece82}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GamePlay\EventSystem">
+      <UniqueIdentifier>{3a3baa60-ee5e-4720-92ec-a17402269161}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GamePlay\GameObjects">
+      <UniqueIdentifier>{50ba6112-e1ae-49e7-9de3-7e59a940e133}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GamePlay\GameObjects\Property">
+      <UniqueIdentifier>{2374d07a-5efb-412b-941d-20b23da8a600}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="HID">
+      <UniqueIdentifier>{4d6fc167-4db1-440d-aabb-46faf3e3331f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Libraries">
+      <UniqueIdentifier>{3a8fc51a-2b82-426d-a4a0-d8c3fce0ed9c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="PIL">
+      <UniqueIdentifier>{de4f6149-2d68-4155-a036-9ba6c748234a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="PhysicsEngine">
+      <UniqueIdentifier>{e9710f69-9c56-4fd5-ae21-2d07cb110b8d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="PhysicsEngine\PhysicsObject">
+      <UniqueIdentifier>{59752cdb-658e-4fe6-a6f2-64d5820c44cc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="PIL\D3D11_PIL">
+      <UniqueIdentifier>{59648e3d-784d-41f2-ac70-b00914c5e58a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="PIL\HIDInfoGetter">
+      <UniqueIdentifier>{b0f342ee-66f0-490f-88d3-e505f756c223}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="PIL\LLGI">
+      <UniqueIdentifier>{c4225f83-d704-4618-ac6c-91cc8f2ffbd3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="PIL\LLGI\Shader">
+      <UniqueIdentifier>{ab4d6cbc-2973-46d9-aa2f-80a6a6be6178}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RenderingEngine">
+      <UniqueIdentifier>{deee385e-a671-4c64-a6bb-8b9fb2c4f3bb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RenderingEngine\2DObjects">
+      <UniqueIdentifier>{d3f2f81f-e518-4f5e-925a-569aca884db9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RenderingEngine\Font">
+      <UniqueIdentifier>{3b83945b-d986-4d6d-bfbc-2514f5500a91}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RenderingEngine\GraphicPipline">
+      <UniqueIdentifier>{10b5e205-e671-41d1-b530-b1df5bbdf63d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RenderingEngine\SceneGraph">
+      <UniqueIdentifier>{826f9c0b-68ad-4416-bb0a-4003636606e4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RenderingEngine\GraphicPipline\DeferredGraphicPipeline">
+      <UniqueIdentifier>{64f2600a-bae9-4def-a3a8-85a9f9f67243}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RenderingEngine\GraphicPipline\DeferredGraphicPipeline\DeferredShaders">
+      <UniqueIdentifier>{cade7075-46be-407c-8e29-bdb3cc41cde9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RenderingEngine\GraphicPipline\DeferredGraphicPipeline\DeferredShaders\Shaders">
+      <UniqueIdentifier>{cab80ff3-c974-45e9-8232-8fcfdd630df5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RenderingEngine\GraphicPipline\DeferredGraphicPipeline\ShadowMaskGenerator">
+      <UniqueIdentifier>{51e4e605-ac74-49c8-825b-4bba3246b4a2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RenderingEngine\GraphicPipline\DeferredGraphicPipeline\ShadowMaskGenerator\Shaders">
+      <UniqueIdentifier>{314aa463-3374-40be-a29b-f19787f4d9df}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RenderingEngine\GraphicPipline\ForwardGraphicPipeline">
+      <UniqueIdentifier>{a7e6b76c-ae56-44ba-b29e-b807809e1564}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RenderingEngine\GraphicPipline\GraphicObject">
+      <UniqueIdentifier>{dabe21b0-44cf-4b82-8d37-0a41edd89cb4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RenderingEngine\GraphicPipline\GraphicObject\Material">
+      <UniqueIdentifier>{850a68e1-da6b-46df-b6c9-47d1699dbbce}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RenderingEngine\GraphicPipline\GraphicObject\Mesh">
+      <UniqueIdentifier>{99cb58d8-066e-452f-b1f8-c15bbcbf2695}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RenderingEngine\GraphicPipline\ShadowMap">
+      <UniqueIdentifier>{7ded9602-b550-443d-9851-2755c8231ec1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RenderingEngine\GraphicPipline\ShadowMap\Shaders">
+      <UniqueIdentifier>{5cdf8f98-d52c-4f56-9d22-c7d7cf9d0a8a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RenderingEngine\SceneGraph\NodeObserver">
+      <UniqueIdentifier>{dbecf829-cf43-4de9-8664-1a7dea7a21fd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RenderingEngine\SceneGraph\NodeResource">
+      <UniqueIdentifier>{0a412417-5588-4626-92f7-97ea5a43a1a3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RenderingEngine\SceneGraph\Transform">
+      <UniqueIdentifier>{24df9c9f-7d3c-4281-b3aa-d6ee2b492f7f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Script">
+      <UniqueIdentifier>{44d1692f-a774-4a71-870f-ddb852b98468}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sound">
+      <UniqueIdentifier>{99d6e8c1-a308-44f8-94e3-6bf3c8c8bf79}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Timer">
+      <UniqueIdentifier>{5598a4a4-85c1-46ba-8fc0-b74dfde898e1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AnimationEngine\CharacterAnimation">
+      <UniqueIdentifier>{8c6de121-f773-4c68-a248-85c32778ff09}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Base\DataStructure">
+      <UniqueIdentifier>{042dd95c-ac71-441b-b4a0-2841ea1364ea}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AnimationEngine.h">
+      <Filter>AnimationEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="AnimationInstance.h">
+      <Filter>AnimationEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="Animation.h">
+      <Filter>AnimationEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="Algorithm.hpp">
+      <Filter>Base\CommonUtility</Filter>
+    </ClInclude>
+    <ClInclude Include="CommonMacro.hpp">
+      <Filter>Base\CommonUtility</Filter>
+    </ClInclude>
+    <ClInclude Include="CommonTemplate.hpp">
+      <Filter>Base\CommonUtility</Filter>
+    </ClInclude>
+    <ClInclude Include="CommonUtility.h">
+      <Filter>Base\CommonUtility</Filter>
+    </ClInclude>
+    <ClInclude Include="CommonDataTypes.hpp">
+      <Filter>Base\CommonUtility</Filter>
+    </ClInclude>
+    <ClInclude Include="Configuration.h">
+      <Filter>Base\Configuration</Filter>
+    </ClInclude>
+    <ClInclude Include="Container.hpp">
+      <Filter>Base\Container</Filter>
+    </ClInclude>
+    <ClInclude Include="Exception.h">
+      <Filter>Base\Exception</Filter>
+    </ClInclude>
+    <ClInclude Include="BasicMath.h">
+      <Filter>Base\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="PoolAllocateObject.h">
+      <Filter>Base\Memory</Filter>
+    </ClInclude>
+    <ClInclude Include="ThreadProcessor.h">
+      <Filter>Base\ThreadProcessor</Filter>
+    </ClInclude>
+    <ClInclude Include="NecromancerLimit.h">
+      <Filter>Base\Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="DynamicLineSetMesh.h">
+      <Filter>DebugHelper</Filter>
+    </ClInclude>
+    <ClInclude Include="Event.h">
+      <Filter>GamePlay\EventSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="Property.h">
+      <Filter>GamePlay\GameObjects\Property</Filter>
+    </ClInclude>
+    <ClInclude Include="IntegerProperty.h">
+      <Filter>GamePlay\GameObjects\Property</Filter>
+    </ClInclude>
+    <ClInclude Include="StringProperty.h">
+      <Filter>GamePlay\GameObjects\Property</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObject.h">
+      <Filter>GamePlay\GameObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="GameWorld.h">
+      <Filter>GamePlay\GameObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="StaticGameObject.h">
+      <Filter>GamePlay\GameObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="StaticLandScape.h">
+      <Filter>GamePlay\GameObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="DynamicGameObject.h">
+      <Filter>GamePlay\GameObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="HandlerUtility.hpp">
+      <Filter>HID</Filter>
+    </ClInclude>
+    <ClInclude Include="HID.h">
+      <Filter>HID</Filter>
+    </ClInclude>
+    <ClInclude Include="MouseHandler.h">
+      <Filter>HID</Filter>
+    </ClInclude>
+    <ClInclude Include="KeyboardHandler.h">
+      <Filter>HID</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptKeyboardHandler.h">
+      <Filter>HID</Filter>
+    </ClInclude>
+    <ClInclude Include="FreeImageLibrary.h">
+      <Filter>Libraries</Filter>
+    </ClInclude>
+    <ClInclude Include="PhysicsEngine.h">
+      <Filter>PhysicsEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="PILFactory.h">
+      <Filter>PIL</Filter>
+    </ClInclude>
+    <ClInclude Include="PIL.h">
+      <Filter>PIL</Filter>
+    </ClInclude>
+    <ClInclude Include="D3D11FSGenerator.h">
+      <Filter>PIL\D3D11_PIL</Filter>
+    </ClInclude>
+    <ClInclude Include="D3D11Pointers.h">
+      <Filter>PIL\D3D11_PIL</Filter>
+    </ClInclude>
+    <ClInclude Include="D3D11ShaderManager.h">
+      <Filter>PIL\D3D11_PIL</Filter>
+    </ClInclude>
+    <ClInclude Include="D3D11VSGenerator.h">
+      <Filter>PIL\D3D11_PIL</Filter>
+    </ClInclude>
+    <ClInclude Include="D3D11_1LLGI.h">
+      <Filter>PIL\D3D11_PIL</Filter>
+    </ClInclude>
+    <ClInclude Include="D3D11_1PIL.h">
+      <Filter>PIL\D3D11_PIL</Filter>
+    </ClInclude>
+    <ClInclude Include="STDWHIDInfoGetter.h">
+      <Filter>PIL\D3D11_PIL</Filter>
+    </ClInclude>
+    <ClInclude Include="PILHIDInfoGetter.h">
+      <Filter>PIL\HIDInfoGetter</Filter>
+    </ClInclude>
+    <ClInclude Include="PILLLGI.h">
+      <Filter>PIL\LLGI</Filter>
+    </ClInclude>
+    <ClInclude Include="RenderingResource.h">
+      <Filter>PIL\LLGI</Filter>
+    </ClInclude>
+    <ClInclude Include="FSDeclaration.h">
+      <Filter>PIL\LLGI\Shader</Filter>
+    </ClInclude>
+    <ClInclude Include="FSGenerator.h">
+      <Filter>PIL\LLGI\Shader</Filter>
+    </ClInclude>
+    <ClInclude Include="FSProcess.h">
+      <Filter>PIL\LLGI\Shader</Filter>
+    </ClInclude>
+    <ClInclude Include="VSDeclaration.h">
+      <Filter>PIL\LLGI\Shader</Filter>
+    </ClInclude>
+    <ClInclude Include="VSGenerator.h">
+      <Filter>PIL\LLGI\Shader</Filter>
+    </ClInclude>
+    <ClInclude Include="VSProcess.h">
+      <Filter>PIL\LLGI\Shader</Filter>
+    </ClInclude>
+    <ClInclude Include="PILShaderManager.h">
+      <Filter>PIL\LLGI\Shader</Filter>
+    </ClInclude>
+    <ClInclude Include="TwoDObject.h">
+      <Filter>RenderingEngine\2DObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="PictureObject.h">
+      <Filter>RenderingEngine\2DObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="DrawingRequest.h">
+      <Filter>RenderingEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="RenderingEngine.h">
+      <Filter>RenderingEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="RenderContext.h">
+      <Filter>RenderingEngine\GraphicPipline</Filter>
+    </ClInclude>
+    <ClInclude Include="GraphicPipeline.h">
+      <Filter>RenderingEngine\GraphicPipline</Filter>
+    </ClInclude>
+    <ClInclude Include="WVPMatrices.h">
+      <Filter>RenderingEngine\GraphicPipline</Filter>
+    </ClInclude>
+    <ClInclude Include="TBDS_CS_DATA.h">
+      <Filter>RenderingEngine\GraphicPipline\DeferredGraphicPipeline\DeferredShaders\Shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="DeferredShader.h">
+      <Filter>RenderingEngine\GraphicPipline\DeferredGraphicPipeline\DeferredShaders</Filter>
+    </ClInclude>
+    <ClInclude Include="TileBasedDeferredShader.h">
+      <Filter>RenderingEngine\GraphicPipline\DeferredGraphicPipeline\DeferredShaders</Filter>
+    </ClInclude>
+    <ClInclude Include="DeferredGraphicPipeline.h">
+      <Filter>RenderingEngine\GraphicPipline\DeferredGraphicPipeline</Filter>
+    </ClInclude>
+    <ClInclude Include="GBuffer.h">
+      <Filter>RenderingEngine\GraphicPipline\DeferredGraphicPipeline</Filter>
+    </ClInclude>
+    <ClInclude Include="ShadowMaskDirCS.h">
+      <Filter>RenderingEngine\GraphicPipline\DeferredGraphicPipeline\ShadowMaskGenerator\Shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="ShadowMaskPointCS.h">
+      <Filter>RenderingEngine\GraphicPipline\DeferredGraphicPipeline\ShadowMaskGenerator\Shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="ShadowMaskSpotCS.h">
+      <Filter>RenderingEngine\GraphicPipline\DeferredGraphicPipeline\ShadowMaskGenerator\Shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="ShadowMaskGenerator.h">
+      <Filter>RenderingEngine\GraphicPipline\DeferredGraphicPipeline\ShadowMaskGenerator</Filter>
+    </ClInclude>
+    <ClInclude Include="ForwardGraphicPipeline.h">
+      <Filter>RenderingEngine\GraphicPipline\ForwardGraphicPipeline</Filter>
+    </ClInclude>
+    <ClInclude Include="Camera.h">
+      <Filter>RenderingEngine\GraphicPipline\GraphicObject</Filter>
+    </ClInclude>
+    <ClInclude Include="Geometry.h">
+      <Filter>RenderingEngine\GraphicPipline\GraphicObject</Filter>
+    </ClInclude>
+    <ClInclude Include="Light.h">
+      <Filter>RenderingEngine\GraphicPipline\GraphicObject</Filter>
+    </ClInclude>
+    <ClInclude Include="Material.h">
+      <Filter>RenderingEngine\GraphicPipline\GraphicObject\Material</Filter>
+    </ClInclude>
+    <ClInclude Include="Mesh.h">
+      <Filter>RenderingEngine\GraphicPipline\GraphicObject\Mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="HardwareDeformMesh.h">
+      <Filter>RenderingEngine\GraphicPipline\GraphicObject\Mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="ShadowMapManager.h">
+      <Filter>RenderingEngine\GraphicPipline\ShadowMap</Filter>
+    </ClInclude>
+    <ClInclude Include="sm_point_gs.h">
+      <Filter>RenderingEngine\GraphicPipline\ShadowMap\Shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="sm_point_vs.h">
+      <Filter>RenderingEngine\GraphicPipline\ShadowMap\Shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="sm_spot_fs.h">
+      <Filter>RenderingEngine\GraphicPipline\ShadowMap\Shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="sm_spot_vs.h">
+      <Filter>RenderingEngine\GraphicPipline\ShadowMap\Shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="sm_dir_fs.h">
+      <Filter>RenderingEngine\GraphicPipline\ShadowMap\Shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="sm_dir_vs.h">
+      <Filter>RenderingEngine\GraphicPipline\ShadowMap\Shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="sm_point_fs.h">
+      <Filter>RenderingEngine\GraphicPipline\ShadowMap\Shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="BoundingVolume.h">
+      <Filter>RenderingEngine\SceneGraph</Filter>
+    </ClInclude>
+    <ClInclude Include="Frustum.h">
+      <Filter>RenderingEngine\SceneGraph</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneNode.h">
+      <Filter>RenderingEngine\SceneGraph</Filter>
+    </ClInclude>
+    <ClInclude Include="Scene.h">
+      <Filter>RenderingEngine\SceneGraph</Filter>
+    </ClInclude>
+    <ClInclude Include="SubScene.h">
+      <Filter>RenderingEngine\SceneGraph</Filter>
+    </ClInclude>
+    <ClInclude Include="Transform.h">
+      <Filter>RenderingEngine\SceneGraph\Transform</Filter>
+    </ClInclude>
+    <ClInclude Include="NodeObserver.h">
+      <Filter>RenderingEngine\SceneGraph\NodeObserver</Filter>
+    </ClInclude>
+    <ClInclude Include="NodeObserverManager.h">
+      <Filter>RenderingEngine\SceneGraph\NodeObserver</Filter>
+    </ClInclude>
+    <ClInclude Include="NodeResource.h">
+      <Filter>RenderingEngine\SceneGraph\NodeResource</Filter>
+    </ClInclude>
+    <ClInclude Include="NodeGeometryResource.h">
+      <Filter>RenderingEngine\SceneGraph\NodeResource</Filter>
+    </ClInclude>
+    <ClInclude Include="NodeLightResource.h">
+      <Filter>RenderingEngine\SceneGraph\NodeResource</Filter>
+    </ClInclude>
+    <ClInclude Include="NodeCameraResource.h">
+      <Filter>RenderingEngine\SceneGraph\NodeResource</Filter>
+    </ClInclude>
+    <ClInclude Include="Necromancer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="InitModules.h">
+      <Filter>Script</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptInterpreter.h">
+      <Filter>Script</Filter>
+    </ClInclude>
+    <ClInclude Include="Script.h">
+      <Filter>Script</Filter>
+    </ClInclude>
+    <ClInclude Include="WrapModules.h">
+      <Filter>Script</Filter>
+    </ClInclude>
+    <ClInclude Include="SoundPlayer.h">
+      <Filter>Sound</Filter>
+    </ClInclude>
+    <ClInclude Include="SoundEngine.h">
+      <Filter>Sound</Filter>
+    </ClInclude>
+    <ClInclude Include="Timer.h">
+      <Filter>Timer</Filter>
+    </ClInclude>
+    <ClInclude Include="RenderingThread.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SoftwareDeformMesh.h">
+      <Filter>RenderingEngine\GraphicPipline\GraphicObject\Mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="FBXFileUtility.h">
+      <Filter>FileUtility</Filter>
+    </ClInclude>
+    <ClInclude Include="PhysicsObject.h">
+      <Filter>PhysicsEngine\PhysicsObject</Filter>
+    </ClInclude>
+    <ClInclude Include="SkeletonInstance.h">
+      <Filter>AnimationEngine\CharacterAnimation</Filter>
+    </ClInclude>
+    <ClInclude Include="Skeleton.h">
+      <Filter>AnimationEngine\CharacterAnimation</Filter>
+    </ClInclude>
+    <ClInclude Include="TreeNode.h">
+      <Filter>Base\DataStructure</Filter>
+    </ClInclude>
+    <ClInclude Include="Tree.h">
+      <Filter>Base\DataStructure</Filter>
+    </ClInclude>
+    <ClInclude Include="Logger.h">
+      <Filter>Base\Exception</Filter>
+    </ClInclude>
+    <ClInclude Include="NECMotionState.h">
+      <Filter>PhysicsEngine\PhysicsObject</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Terrain.h">
+      <Filter>GamePlay\GameObjects</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AnimationInstance.cpp">
+      <Filter>AnimationEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="AnimationEngine.cpp">
+      <Filter>AnimationEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="Animation.cpp">
+      <Filter>AnimationEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="Configuration.cpp">
+      <Filter>Base\Configuration</Filter>
+    </ClCompile>
+    <ClCompile Include="Exception.cpp">
+      <Filter>Base\Exception</Filter>
+    </ClCompile>
+    <ClCompile Include="BasicMath.cpp">
+      <Filter>Base\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="PoolAllocateObject.cpp">
+      <Filter>Base\Memory</Filter>
+    </ClCompile>
+    <ClCompile Include="ThreadProcessor.cpp">
+      <Filter>Base\ThreadProcessor</Filter>
+    </ClCompile>
+    <ClCompile Include="DynamicLineSetMesh.cpp">
+      <Filter>DebugHelper</Filter>
+    </ClCompile>
+    <ClCompile Include="Event.cpp">
+      <Filter>GamePlay\EventSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="Property.cpp">
+      <Filter>GamePlay\GameObjects\Property</Filter>
+    </ClCompile>
+    <ClCompile Include="IntegerProperty.cpp">
+      <Filter>GamePlay\GameObjects\Property</Filter>
+    </ClCompile>
+    <ClCompile Include="StringProperty.cpp">
+      <Filter>GamePlay\GameObjects\Property</Filter>
+    </ClCompile>
+    <ClCompile Include="GameWorld.cpp">
+      <Filter>GamePlay\GameObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObject.cpp">
+      <Filter>GamePlay\GameObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="StaticLandScape.cpp">
+      <Filter>GamePlay\GameObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="StaticGameObject.cpp">
+      <Filter>GamePlay\GameObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="DynamicGameObject.cpp">
+      <Filter>GamePlay\GameObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="HID.cpp">
+      <Filter>HID</Filter>
+    </ClCompile>
+    <ClCompile Include="MouseHandler.cpp">
+      <Filter>HID</Filter>
+    </ClCompile>
+    <ClCompile Include="KeyboardHandler.cpp">
+      <Filter>HID</Filter>
+    </ClCompile>
+    <ClCompile Include="ScriptKeyboardHandler.cpp">
+      <Filter>HID</Filter>
+    </ClCompile>
+    <ClCompile Include="FreeImageLibrary.cpp">
+      <Filter>Libraries</Filter>
+    </ClCompile>
+    <ClCompile Include="PhysicsEngine.cpp">
+      <Filter>PhysicsEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="PILFactory.cpp">
+      <Filter>PIL</Filter>
+    </ClCompile>
+    <ClCompile Include="PIL.cpp">
+      <Filter>PIL</Filter>
+    </ClCompile>
+    <ClCompile Include="D3D11Pointers.cpp">
+      <Filter>PIL\D3D11_PIL</Filter>
+    </ClCompile>
+    <ClCompile Include="D3D11ShaderManager.cpp">
+      <Filter>PIL\D3D11_PIL</Filter>
+    </ClCompile>
+    <ClCompile Include="D3D11VSGenerator.cpp">
+      <Filter>PIL\D3D11_PIL</Filter>
+    </ClCompile>
+    <ClCompile Include="D3D11_1LLGI.cpp">
+      <Filter>PIL\D3D11_PIL</Filter>
+    </ClCompile>
+    <ClCompile Include="D3D11_1PIL.cpp">
+      <Filter>PIL\D3D11_PIL</Filter>
+    </ClCompile>
+    <ClCompile Include="D3D11FSGenerator.cpp">
+      <Filter>PIL\D3D11_PIL</Filter>
+    </ClCompile>
+    <ClCompile Include="STDWHIDInfoGetter.cpp">
+      <Filter>PIL\D3D11_PIL</Filter>
+    </ClCompile>
+    <ClCompile Include="PILHIDInfoGetter.cpp">
+      <Filter>PIL\HIDInfoGetter</Filter>
+    </ClCompile>
+    <ClCompile Include="PILLLGI.cpp">
+      <Filter>PIL\LLGI</Filter>
+    </ClCompile>
+    <ClCompile Include="RenderingResource.cpp">
+      <Filter>PIL\LLGI</Filter>
+    </ClCompile>
+    <ClCompile Include="FSGenerator.cpp">
+      <Filter>PIL\LLGI\Shader</Filter>
+    </ClCompile>
+    <ClCompile Include="FSProcess.cpp">
+      <Filter>PIL\LLGI\Shader</Filter>
+    </ClCompile>
+    <ClCompile Include="FSDeclaration.cpp">
+      <Filter>PIL\LLGI\Shader</Filter>
+    </ClCompile>
+    <ClCompile Include="VSGenerator.cpp">
+      <Filter>PIL\LLGI\Shader</Filter>
+    </ClCompile>
+    <ClCompile Include="VSProcess.cpp">
+      <Filter>PIL\LLGI\Shader</Filter>
+    </ClCompile>
+    <ClCompile Include="VSDeclaration.cpp">
+      <Filter>PIL\LLGI\Shader</Filter>
+    </ClCompile>
+    <ClCompile Include="PILShaderManager.cpp">
+      <Filter>PIL\LLGI\Shader</Filter>
+    </ClCompile>
+    <ClCompile Include="TwoDObject.cpp">
+      <Filter>RenderingEngine\2DObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="PictureObject.cpp">
+      <Filter>RenderingEngine\2DObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="DrawingRequest.cpp">
+      <Filter>RenderingEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="RenderingEngine.cpp">
+      <Filter>RenderingEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="RenderContext.cpp">
+      <Filter>RenderingEngine\GraphicPipline</Filter>
+    </ClCompile>
+    <ClCompile Include="GraphicPipeline.cpp">
+      <Filter>RenderingEngine\GraphicPipline</Filter>
+    </ClCompile>
+    <ClCompile Include="WVPMatrices.cpp">
+      <Filter>RenderingEngine\GraphicPipline</Filter>
+    </ClCompile>
+    <ClCompile Include="TileBasedDeferredShader.cpp">
+      <Filter>RenderingEngine\GraphicPipline\DeferredGraphicPipeline\DeferredShaders</Filter>
+    </ClCompile>
+    <ClCompile Include="DeferredShader.cpp">
+      <Filter>RenderingEngine\GraphicPipline\DeferredGraphicPipeline\DeferredShaders</Filter>
+    </ClCompile>
+    <ClCompile Include="GBuffer.cpp">
+      <Filter>RenderingEngine\GraphicPipline\DeferredGraphicPipeline</Filter>
+    </ClCompile>
+    <ClCompile Include="DeferredGraphicPipeline.cpp">
+      <Filter>RenderingEngine\GraphicPipline\DeferredGraphicPipeline</Filter>
+    </ClCompile>
+    <ClCompile Include="ShadowMaskGenerator.cpp">
+      <Filter>RenderingEngine\GraphicPipline\DeferredGraphicPipeline\ShadowMaskGenerator</Filter>
+    </ClCompile>
+    <ClCompile Include="ForwardGraphicPipeline.cpp">
+      <Filter>RenderingEngine\GraphicPipline\ForwardGraphicPipeline</Filter>
+    </ClCompile>
+    <ClCompile Include="Camera.cpp">
+      <Filter>RenderingEngine\GraphicPipline\GraphicObject</Filter>
+    </ClCompile>
+    <ClCompile Include="Geometry.cpp">
+      <Filter>RenderingEngine\GraphicPipline\GraphicObject</Filter>
+    </ClCompile>
+    <ClCompile Include="Light.cpp">
+      <Filter>RenderingEngine\GraphicPipline\GraphicObject</Filter>
+    </ClCompile>
+    <ClCompile Include="Material.cpp">
+      <Filter>RenderingEngine\GraphicPipline\GraphicObject\Material</Filter>
+    </ClCompile>
+    <ClCompile Include="Mesh.cpp">
+      <Filter>RenderingEngine\GraphicPipline\GraphicObject\Mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="HardwareDeformMesh.cpp">
+      <Filter>RenderingEngine\GraphicPipline\GraphicObject\Mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="ShadowMapManager.cpp">
+      <Filter>RenderingEngine\GraphicPipline\ShadowMap</Filter>
+    </ClCompile>
+    <ClCompile Include="BoundingVolume.cpp">
+      <Filter>RenderingEngine\SceneGraph</Filter>
+    </ClCompile>
+    <ClCompile Include="Frustum.cpp">
+      <Filter>RenderingEngine\SceneGraph</Filter>
+    </ClCompile>
+    <ClCompile Include="Scene.cpp">
+      <Filter>RenderingEngine\SceneGraph</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneNode.cpp">
+      <Filter>RenderingEngine\SceneGraph</Filter>
+    </ClCompile>
+    <ClCompile Include="SubScene.cpp">
+      <Filter>RenderingEngine\SceneGraph</Filter>
+    </ClCompile>
+    <ClCompile Include="Transform.cpp">
+      <Filter>RenderingEngine\SceneGraph\Transform</Filter>
+    </ClCompile>
+    <ClCompile Include="NodeObserver.cpp">
+      <Filter>RenderingEngine\SceneGraph\NodeObserver</Filter>
+    </ClCompile>
+    <ClCompile Include="NodeObserverManager.cpp">
+      <Filter>RenderingEngine\SceneGraph\NodeObserver</Filter>
+    </ClCompile>
+    <ClCompile Include="NodeResource.cpp">
+      <Filter>RenderingEngine\SceneGraph\NodeResource</Filter>
+    </ClCompile>
+    <ClCompile Include="NodeGeometryResource.cpp">
+      <Filter>RenderingEngine\SceneGraph\NodeResource</Filter>
+    </ClCompile>
+    <ClCompile Include="NodeLightResource.cpp">
+      <Filter>RenderingEngine\SceneGraph\NodeResource</Filter>
+    </ClCompile>
+    <ClCompile Include="NodeCameraResource.cpp">
+      <Filter>RenderingEngine\SceneGraph\NodeResource</Filter>
+    </ClCompile>
+    <ClCompile Include="Necromancer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="InitModules.cpp">
+      <Filter>Script</Filter>
+    </ClCompile>
+    <ClCompile Include="ScriptInterpreter.cpp">
+      <Filter>Script</Filter>
+    </ClCompile>
+    <ClCompile Include="Script.cpp">
+      <Filter>Script</Filter>
+    </ClCompile>
+    <ClCompile Include="WrapModules.cpp">
+      <Filter>Script</Filter>
+    </ClCompile>
+    <ClCompile Include="SoundPlayer.cpp">
+      <Filter>Sound</Filter>
+    </ClCompile>
+    <ClCompile Include="SoundEngine.cpp">
+      <Filter>Sound</Filter>
+    </ClCompile>
+    <ClCompile Include="Timer.cpp">
+      <Filter>Timer</Filter>
+    </ClCompile>
+    <ClCompile Include="RenderingThread.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SoftwareDeformMesh.cpp">
+      <Filter>RenderingEngine\GraphicPipline\GraphicObject\Mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="FBXFileUtility.cpp">
+      <Filter>FileUtility</Filter>
+    </ClCompile>
+    <ClCompile Include="PhysicsObject.cpp">
+      <Filter>PhysicsEngine\PhysicsObject</Filter>
+    </ClCompile>
+    <ClCompile Include="SkeletonInstance.cpp">
+      <Filter>AnimationEngine\CharacterAnimation</Filter>
+    </ClCompile>
+    <ClCompile Include="Skeleton.cpp">
+      <Filter>AnimationEngine\CharacterAnimation</Filter>
+    </ClCompile>
+    <ClCompile Include="TreeNode.cpp">
+      <Filter>Base\DataStructure</Filter>
+    </ClCompile>
+    <ClCompile Include="Logger.cpp">
+      <Filter>Base\Exception</Filter>
+    </ClCompile>
+    <ClCompile Include="NECMotionState.cpp">
+      <Filter>PhysicsEngine\PhysicsObject</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Terrain.cpp">
+      <Filter>GamePlay\GameObjects</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="TileBasedDeferredShader.hlsl">
+      <Filter>RenderingEngine\GraphicPipline\DeferredGraphicPipeline\DeferredShaders\Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="ShadowMaskDirCS.hlsl">
+      <Filter>RenderingEngine\GraphicPipline\DeferredGraphicPipeline\ShadowMaskGenerator\Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="ShadowMaskPointCS.hlsl">
+      <Filter>RenderingEngine\GraphicPipline\DeferredGraphicPipeline\ShadowMaskGenerator\Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="ShadowMaskSpotCS.hlsl">
+      <Filter>RenderingEngine\GraphicPipline\DeferredGraphicPipeline\ShadowMaskGenerator\Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="sm_point_gs.hlsl">
+      <Filter>RenderingEngine\GraphicPipline\ShadowMap\Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="sm_point_vs.hlsl">
+      <Filter>RenderingEngine\GraphicPipline\ShadowMap\Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="sm_spot_fs.hlsl">
+      <Filter>RenderingEngine\GraphicPipline\ShadowMap\Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="sm_spot_vs.hlsl">
+      <Filter>RenderingEngine\GraphicPipline\ShadowMap\Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="sm_dir_fs.hlsl">
+      <Filter>RenderingEngine\GraphicPipline\ShadowMap\Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="sm_dir_vs.hlsl">
+      <Filter>RenderingEngine\GraphicPipline\ShadowMap\Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="sm_point_fs.hlsl">
+      <Filter>RenderingEngine\GraphicPipline\ShadowMap\Shaders</Filter>
+    </FxCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Log.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="XMLFile.xml">
+      <Filter>Resource Files</Filter>
+    </Xml>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="config.ini">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+</Project>

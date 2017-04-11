@@ -1,0 +1,506 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<fragments>
+  <vsdeclarations>
+    <vsdeclaration name="matrices_declaration" id ="0">
+      <![CDATA[
+      cbuffer matrices:register(b0){
+          float4x4 world;
+          float4x4 view;
+          float4x4 projection;
+      }
+    ]]>
+    </vsdeclaration>
+
+    <vsdeclaration name="skeleton_declaration" id ="1">
+      <![CDATA[
+      cbuffer skeleton_matrix:register(b5){
+          float4x4 matrices[128];
+      }
+      struct SkinedInfo{
+          float4 position;
+          float3 normal;
+      };
+
+      SkinedInfo caculate_skining(VSInput input){
+          SkinedInfo info = (SkinedInfo)0;
+          float4 position = float4(input.position, 1.0f);
+          float3 normal = input.normal;
+          float4x4 mat;
+          float3x3 normal_t;
+          
+          for(int i = 0;i < 4;++ i){
+              mat = matrices[input.skeleton_id[i]];
+              info.position    += mul(mat, position) * input.skeleton_weights[i];
+              normal_t += (float3x3)mat * input.skeleton_weights[i];
+          }
+          
+          info.normal = normal;
+          return info;
+      }
+      ]]>
+    </vsdeclaration>
+  </vsdeclarations>
+
+  <vsfragments>
+    <vsfragment id="0" >
+      <vsattachdec id ="0" />
+      <vscontext input="PNA2" output="PNA2T">
+        <![CDATA[
+        result.t_pos = float4(input.position, 1.0);
+        result.t_pos = mul(world, result.t_pos);
+        result.position = result.t_pos.xyz / result.t_pos.w;
+        result.t_pos = mul(view, result.t_pos);
+        result.t_pos = mul(projection, result.t_pos);
+        result.normal = mul(world, float4(input.normal, 0.0f)).xyz;
+        result.tangent = mul(world, float4(input.tangent, 0.0f)).xyz;
+        result.tex = input.tex;
+        ]]>
+      </vscontext>
+      <vscontext input="PN2" output="PN2T">
+        <![CDATA[
+        result.t_pos = float4(input.position, 1.0);
+        result.t_pos = mul(world, result.t_pos);
+        result.position = result.t_pos.xyz / result.t_pos.w;
+        result.t_pos = mul(view, result.t_pos);
+        result.t_pos = mul(projection, result.t_pos);
+        result.normal = mul(world, float4(input.normal, 0.0f)).xyz;
+        result.tex = input.tex;
+        ]]>
+      </vscontext>
+      <vscontext input="PN" output="PNT">
+        <![CDATA[
+        result.t_pos = float4(input.position, 1.0);
+        result.t_pos = mul(world, result.t_pos);
+        result.position = result.t_pos.xyz / result.t_pos.w;
+        result.t_pos = mul(view, result.t_pos);
+        result.t_pos = mul(projection, result.t_pos);
+        result.normal = mul(world, float4(input.normal, 0.0f)).xyz;
+        ]]>
+      </vscontext>
+      <vscontext input="P" output="PT">
+        <![CDATA[
+        result.t_pos = float4(input.position, 1.0);
+        result.t_pos = mul(world, result.t_pos);
+        result.position = result.t_pos.xyz / result.t_pos.w;
+        result.t_pos = mul(view, result.t_pos);
+        result.t_pos = mul(projection, result.t_pos);
+        ]]>
+      </vscontext>
+      <vscontext input="PC" output="PTC">
+        <![CDATA[
+        result.t_pos = float4(input.position, 1.0);
+        result.t_pos = mul(world, result.t_pos);
+        result.position = result.t_pos.xyz / result.t_pos.w;
+        result.t_pos = mul(view, result.t_pos);
+        result.t_pos = mul(projection, result.t_pos);
+        result.color = mul(projection, result.color);
+        ]]>
+      </vscontext>
+    </vsfragment>
+
+    <vsfragment id="1" >
+      <vsattachdec id ="1" />
+      <vscontext input="PN2S" output="PN2TS">
+        <![CDATA[
+        SkinedInfo info = caculate_skining(input);
+        input.position = info.position.xyz / info.position.w;
+        ]]>
+      </vscontext>
+    </vsfragment>
+
+  </vsfragments>
+
+
+  <vsutility>
+    <vshead>
+      <![CDATA[
+      PSInput main(VSInput input){
+        PSInput result = (PSInput)0;
+      ]]>
+    </vshead>
+
+    <vstail>
+      <![CDATA[
+        return result;
+      }
+      ]]>
+    </vstail>
+
+    <vsinputs>
+      <vsinputhead>
+        <![CDATA[
+        struct VSInput{
+        ]]>
+      </vsinputhead>
+      <vsinput format="P">
+        <![CDATA[
+        float3 position:POSITION;
+        ]]>
+      </vsinput>
+
+      <vsinput format="N">
+        <![CDATA[
+        float3 normal:NORMAL;
+        ]]>
+      </vsinput>
+
+      <vsinput format="A">
+        <![CDATA[
+        float3 tangent:TANGENT;
+        ]]>
+      </vsinput>
+
+      <vsinput format="C">
+        <![CDATA[
+        float4 color:COLOR;
+        ]]>
+      </vsinput>
+
+      <vsinput format="2">
+        <![CDATA[
+        float2 tex:TEXCOORD0;
+        ]]>
+      </vsinput>
+
+      <vsinput format="S">
+        <![CDATA[
+        uint4 skeleton_id : SKELETON;
+        float4 skeleton_weights : WEIGHTS;
+        ]]>
+      </vsinput>
+
+      <vsinputtail>
+        <![CDATA[
+        };
+        ]]>
+      </vsinputtail>
+    </vsinputs>
+
+    <vsoutputs>
+      <vsoutputhead>
+        <![CDATA[
+        struct PSInput{
+        ]]>
+      </vsoutputhead>
+      <vsoutput format="P">
+        <![CDATA[
+        float3 position:POSITION;
+        ]]>
+      </vsoutput>
+
+      <vsoutput format="N">
+        <![CDATA[
+        float3 normal:NORMAL;
+        ]]>
+      </vsoutput>
+
+      <vsoutput format="A">
+        <![CDATA[
+        float3 tangent:TANGENT;
+        ]]>
+      </vsoutput>
+
+      <vsoutput format="2">
+        <![CDATA[
+        float2 tex:TEXCOORD0;
+        ]]>
+      </vsoutput>
+
+      <vsoutput format="T">
+        <![CDATA[
+        float4 t_pos:SV_POSITION;
+        ]]>
+      </vsoutput>
+
+      <vsoutput format="C">
+        <![CDATA[
+        float4 color:COLOR;
+        ]]>
+      </vsoutput>
+
+      <vsoutputtail>
+        <![CDATA[
+        };
+        ]]>
+      </vsoutputtail>
+    </vsoutputs>
+  </vsutility>
+
+  <fsdeclarations>
+    <fsdeclaration name="LIGHTING_FS_DECL" id="0">
+      <![CDATA[
+      struct Light{
+          float4 position;
+          float4 direction;
+          float4 color;
+          float4 params;
+          uint type;
+          float costheta;
+          float t1, t2;
+      };
+      float3 caculate_light(uint i, Light light, PSInput input){
+          uint type = light.type;
+          float3 result = float3(0.0f, 0.0f, 0.0f);
+          if (type == 0){
+              //Point
+              float3 l = input.position - light.position.xyz;
+                  float distance = length(l);
+              l = -normalize(l);
+              if (distance < light.params[3]){
+                  float ldotn = dot(l, input.normal);
+                  if (ldotn > 0.0f){
+                      float ra =
+                          1.0 / (light.params.x +
+                          light.params.y * distance +
+                          light.params.z * distance * distance);
+                      float k = ldotn * ra;
+                      result = k * light.color.xyz;
+                  }
+              }
+          }
+          else if (type == 1){
+              //Directional
+              float3 l = -normalize(light.direction.xyz);
+                  float ldotn = dot(l, input.normal);
+              if (ldotn > 0.0f){
+                  result = float3(ldotn, ldotn, ldotn);
+              }
+          }
+          else if (type == 2){
+              //Spot
+              float3 l = input.position - light.position.xyz;
+                  float distance = length(l);
+              l = -normalize(l);
+              float ndotd = dot(l, normalize(light.direction.xyz));
+              if (distance < light.params[3]){
+                  float ldotn = dot(l, input.normal);
+                  if (ldotn > 0.0f && ndotd > light.costheta){
+                      float ra =
+                          1.0 / (light.params.x +
+                          light.params.y * distance +
+                          light.params.z * distance * distance);
+                      float k = ldotn * ra * ndotd;
+                      result = k * light.color.xyz;
+                  }
+              }
+          }
+          else{
+          }
+          return result;
+      }
+      cbuffer LightsCB:register(b1){
+          Light lights[32];
+      }
+      cbuffer LightNumCB : register(b2){
+          uint light_num, tmp1, tmp2, tmp3;
+      }
+      ]]>
+    </fsdeclaration>
+
+    <fsdeclaration name="DIFFUSE_TEXTURE_DECL" id="1">
+      <![CDATA[
+      Texture2D<float4> texture_slot0 : register(t0);
+      SamplerState default_sampler : register(s0);]]>
+    </fsdeclaration>
+
+    <fsdeclaration name="G_BUFFER_FS_DEC" id="3">
+      <![CDATA[
+      float2 encode_normal(float3 n){
+      	float oneMinusZ = 1.0f - n.z;
+      	float p = sqrt(n.x * n.x + n.y * n.y + oneMinusZ * oneMinusZ);
+      	return n.xy / p * 0.5f + 0.5f;
+      }
+      ]]>
+    </fsdeclaration>
+  </fsdeclarations>
+
+
+  <fsfragments>
+    <fsfragment id="0" input="PN" outputnum="1">
+      <fsattachdec id ="0" />
+      <context>
+        <![CDATA[
+      float4 ambient = float4(0.1f, 0.1f, 0.1f, 1.0f);
+	    float4 diffuse_specular = float4(0.0f, 0.0f, 0.0f, 1.0f);
+	    [unroll]
+	    for (uint i = 0; i < 1; ++i){
+	    	diffuse_specular.xyz += caculate_light(i, lights[i], input);
+	    }
+	    result.rt0 *= (ambient + diffuse_specular);
+      ]]>
+      </context>
+    </fsfragment>
+
+    <fsfragment id="1" input="2" outputnum="1">
+      <fsattachdec id ="1" />
+      <context>
+        <![CDATA[
+      result.rt0 = texture_slot0.Sample(default_sampler, input.tex);
+      ]]>
+      </context>
+    </fsfragment>
+
+    <fsfragment id="2" input="T" outputnum="1">
+      <context>
+        <![CDATA[
+      result.rt0 = float4(1.0f, 1.0f, 1.0f, 1.0f);
+      ]]>
+      </context>
+    </fsfragment>
+
+    <fsfragment id="3" input="T" outputnum="1">
+      <context>
+        <![CDATA[
+      result.rt0 = float4(1.0f, 0.0f, 0.0f, 1.0f);
+      ]]>
+      </context>
+    </fsfragment>
+
+    <fsfragment id="4" input="TC" outputnum="1">
+      <context>
+        <![CDATA[
+      result.rt0 = input.color;
+      ]]>
+      </context>
+    </fsfragment>
+
+    <fsfragment id="6" input="PN" outputnum="3">
+      <fsattachdec id ="3" />
+      <context>
+        <![CDATA[
+      result.rt0.w = 1.0f;//ambient
+	    result.rt1.xy = encode_normal(normal);//normal
+	    result.rt1.zw = float2(0.2f, asuint(1));//specular, shiness
+	    result.rt2.x = 0.1f;//ambient
+      ]]>
+      </context>
+    </fsfragment>
+  </fsfragments>
+
+  <fsutility>
+    <fshead>
+      <common>
+        <![CDATA[
+        PSOutput main(PSInput input){
+          PSOutput result = (PSOutput)0;
+        ]]>
+      </common>
+
+      <context input="P">
+        <![CDATA[
+        float3 position = input.position;
+        ]]>
+      </context>
+
+      <context input="N">
+        <![CDATA[
+        float3 normal = input.normal;
+        ]]>
+      </context>
+
+      <context input="A">
+        <![CDATA[
+        float3 tangent = input.tangent;
+        ]]>
+      </context>
+
+      <context input="2">
+        <![CDATA[
+        float2 tex = input.tex;
+        ]]>
+      </context>
+
+      <context input="T">
+        <![CDATA[
+        float4 t_pos = input.t_pos;
+        ]]>
+      </context>
+
+      <context input="C">
+        <![CDATA[
+        float4 color = input.color;
+        ]]>
+      </context>
+    </fshead>
+
+    <fstail>
+      <![CDATA[
+        return result;
+      }
+      ]]>
+    </fstail>
+
+    <fsoutput>
+      <head>
+        <![CDATA[
+        struct PSOutput{
+        ]]>
+      </head>
+
+      <tail>
+        <![CDATA[
+        };
+        ]]>
+      </tail>
+
+      <context>
+        <![CDATA[
+        float4 rt# :SV_TARGET#;
+        ]]>
+      </context>
+    </fsoutput>
+
+    <fsinput>
+      <head>
+        <![CDATA[
+        struct PSInput{
+        ]]>
+      </head>
+
+      <tail>
+        <![CDATA[
+        };
+        ]]>
+      </tail>
+
+      <context input="P">
+        <![CDATA[
+        float3 position:POSITION;
+        ]]>
+      </context>
+
+      <context input="N">
+        <![CDATA[
+        float3 normal:NORMAL;
+        ]]>
+      </context>
+
+      <context input="A">
+        <![CDATA[
+        float3 tangent:TANGENT;
+        ]]>
+      </context>
+
+      <context input="2">
+        <![CDATA[
+        float2 tex:TEXCOORD0;
+        ]]>
+      </context>
+
+      <context input="T">
+        <![CDATA[
+        float4 t_pos:SV_POSITION;
+        ]]>
+      </context>
+
+      <context input="C">
+        <![CDATA[
+        float4 color:COLOR;
+        ]]>
+      </context>
+    </fsinput>
+
+  </fsutility>
+
+</fragments>
